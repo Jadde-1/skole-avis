@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.4. Tiende – Skoleavisen fra HTX Roskilde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #f5f5f5, #fff);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 1px;
+    }
+    .hero h2 {
+      font-size: 1.25rem;
+      color: #666;
+      max-width: 600px;
+      margin-top: 1rem;
+    }
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+      flex-grow: 0;
+    }
+    nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    nav a img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+      border-radius: 50%;
+    }
+    nav a:hover {
+      background-color: #eee;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem auto;
+      max-width: 1200px;
+      gap: 2rem;
+      flex-grow: 1;
+      margin-bottom: 10rem;
+    }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+    .main {
+      flex: 1;
+      padding: 1rem;
+      background-color: #f8f8f8;
+    }
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .category-buttons a {
+  padding: 1rem;
+  background-color: #000;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+  width: 120px;
+  max-width: 100%;
+  text-align: center;
+  flex: 1 1 120px;
+}
+
+@media (max-width: 768px) {
+  .category-buttons a {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  footer .footer-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <section class="hero">
+    <h1>2.4. Tiende</h1>
+    <h2>Skoleavisen produceret af eleverne på HTX Roskilde – aktuelle artikler om kultur, politik, sport og meget mere.</h2>
+  </section>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Læs det seneste fra os</h2> <!-- Overskrift -->
+      <div class="category-buttons">
+        <a href="path/to/your/pdf1.pdf" target="_blank">
+          Kultur
+        </a>
+        <a href="path/to/your/pdf2.pdf" target="_blank">
+          Fake News
+        </a>
+        <a href="path/to/your/pdf3.pdf" target="_blank">
+          Sport
+        </a>
+        <a href="path/to/your/pdf4.pdf" target="_blank">
+          Politik
+        </a>
+        <a href="path/to/your/pdf5.pdf" target="_blank">
+          Økonomi
+        </a>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+
+
+  <footer>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <p style="color: white;">Kontakt os: <a href="mailto:kontakt@skoleavisen.dk" style="color: white; text-decoration: none;">U2419432@rts-365.dk</a></p>
+      <p><a href="/24 tiende/cookies-policy.html" style="color: white; text-decoration: none;">Cookiepolitik</a></p>
+    </div>
+    <p style="text-align: center; font-size: 0.8rem; margin-top: 1rem; color: #ccc;">
+      Denne side er kun ment for HTX Roskilde elever til distribution af et arbejdsprojekt.
+    </p>
+  </footer>
+  
+  
+  
+  
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
